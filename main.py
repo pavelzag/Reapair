@@ -34,6 +34,7 @@ def get_repos_list():
         print(f'There are {pull_requests.totalCount} {pr_state} pull requests')
         for pr in pull_requests:
             all_prs_object[pr.title] = {}
+            print(f"Fetching data for {pr.title} pull request")
             pr_head_commit_has = pr.head.sha
             check_runs_url = f"{GITHUB_BASE_URL}/repos/{OWNER}/{REPO}/commits/{pr_head_commit_has}/check-runs"
             headers = {"Authorization": f"token {GITHUB_TOKEN}"}
