@@ -22,6 +22,7 @@ PR_STATES = ['open']
 def healthz():
     return 'OK'
 
+
 @app.route("/get_repos_list", methods=['GET'])
 def get_repos_list():
     content = request.args
