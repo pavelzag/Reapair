@@ -1,1 +1,1 @@
-worker python app.py --log-file
+worker python main.py --log-file
